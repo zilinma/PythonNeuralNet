@@ -1,0 +1,34 @@
+A Neural Network implementation using numpy. The current program automatically
+plots the loss for training for AND, OR, and XOR functions. You can assign
+different input or number of layers for the network, and you can also assign 
+different nodes for each hidden layers. The momentum is enabled. To do this,
+you just need to assign momentum to the agent init function.
+
+To initialize an agent, call constructor for NeuralMMAgent. 
+
+Key functions for debugging:
+
+test_agent.set_weights(): sets weights accordingly. Each layer is one element
+in the list. Each element contains all of the weights in that layer. For 
+instance, 
+test_agent.set_weights([[-.37, .26, .10, -0.24], [-0.01, -0.05]])
+represents the example in class.
+
+test_agent.set_thetas(): sets thetas. 
+test_agent.set_thetas([[.0, .0], [.0]]) represents the example in class. 
+
+train_net(self, input_list, output_list, max_num_epoch=100000,
+                  max_sse=0.1):
+        ''' Trains neural net using incremental learning
+            (update once per input-output pair)
+            Arguments:
+                input_list -- 2D list of inputs
+                output_list -- 2D list of outputs matching inputs
+                max_num_epoch -- int for which the nn stops training
+                max_sse -- float for which the nn stops training
+        '''
+        
+print_weights_thetas_deltas():
+    prints necessary numbers including weights, thetas, change in these values
+    and delta. 
+    
